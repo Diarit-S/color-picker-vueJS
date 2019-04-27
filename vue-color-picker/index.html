@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"> 
+  <title>Vue</title>
+  <script defer type="text/javascript" src="./node_modules/vue/dist/vue.min.js"></script>
+  <script defer type="text/javascript" src="./src/js/index.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+  <div id="app" class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="col-12">
+          <hr />
+          <div class="form-group">
+            <label>Vert : </label>
+            <input class="form-control" type="number" v-model="vert"/>
+          </div>
+          <hr />
+          <div class="form-group">
+            <label>Bleu : </label>
+            <input class="form-control" type="number" v-model="bleu"/>
+          </div>
+          <hr />
+          <div class="form-group">
+            <label>Rouge :</label>
+            <input class="form-control" type="number" v-model="rouge"/>
+          </div>
+          <hr />
+          <div class="col-12">
+            <button class="btn btn-primary" @click="saveSquare">Sauvegarder</button>
+            <button class="btn btn-secondary" @click="reset">Annuler</button>
+          </div>
+          <hr />
+            <h3> Nombre de carrés : </h3>
+          <hr />
+          <div class="col-12" v-if="nbrOfSquares">
+            <div class="prevsquare"></div>
+          </div>
+          <h3 v-else> Ajouter des couleurs ! </h3>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="square mx-auto" ></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+  
+    
+  </script>
+</body>
+</html>
