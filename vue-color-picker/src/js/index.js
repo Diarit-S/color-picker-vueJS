@@ -4,7 +4,8 @@ new Vue({
     vert : '',
     bleu : '',
     rouge : '',
-    squares : []
+    squares : [],
+    selectedSquare : ''
   },
   methods : {
     resetColor(){

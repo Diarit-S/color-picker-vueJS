@@ -34,16 +34,16 @@
             <button class="btn btn-secondary" @click="reset">Annuler</button>
           </div>
           <hr />
-            <h3> Nombre de carrés : </h3>
+            <h3> Nombre de carrés : {{nbrOfSquares}} </h3>
           <hr />
           <div class="col-12" v-if="nbrOfSquares">
-            <div class="prevsquare"></div>
+            <div class="prevsquare" v-for="color in squares" @click="selectedSquare = color" :style="{backgroundColor : color}" ></div>
           </div>
           <h3 v-else> Ajouter des couleurs ! </h3>
         </div>
       </div>
       <div class="col-6">
-        <div class="square mx-auto" ></div>
+        <div class="square mx-auto" :style="{backgroundColor : selectedSquare}"></div>
       </div>
     </div>
   </div>
